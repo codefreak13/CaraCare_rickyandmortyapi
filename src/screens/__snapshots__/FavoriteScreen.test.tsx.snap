@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoriteScreen renders FavoriteScreen correctly 1`] = `
+Array [
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 83.375,
+          "width": 750,
+        },
+        null,
+        null,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "left": 15,
+          "position": "absolute",
+          "zIndex": 1,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            Array [
+              Object {
+                "color": "#1D1F20",
+                "fontSize": 16,
+              },
+              undefined,
+              Object {
+                "fontFamily": "FontAwesome5Free-Solid",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {
+                "fontWeight": "900",
+              },
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 0,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "fontFamily": undefined,
+              "fontSize": 26.5,
+              "fontWeight": "bold",
+            },
+            Object {
+              "color": "#1D1F20",
+            },
+          ]
+        }
+      >
+        FAVORITE CHARACTERS
+      </Text>
+    </View>
+  </View>,
+  <RCTScrollView
+    ListEmptyComponent={
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "marginTop": 328.5,
+          }
+        }
+      >
+        <Unknown
+          title="No Item"
+        />
+      </View>
+    }
+    data={Array []}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    showsVerticalScrollIndicator={false}
+    stickyHeaderIndices={Array []}
+    style={
+      Object {
+        "flex": 1,
+        "width": "100%",
+      }
+    }
+    viewabilityConfigCallbackPairs={Array []}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "marginTop": 328.5,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "fontFamily": undefined,
+                "fontSize": 26.5,
+                "fontWeight": "bold",
+              },
+              undefined,
+            ]
+          }
+        >
+          No Item
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>,
+]
+`;

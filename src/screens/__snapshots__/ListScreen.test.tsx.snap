@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListScreen renders ListScreen correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      },
+      undefined,
+    ]
+  }
+  testID="loader"
+>
+  <ActivityIndicator
+    color="#1D1F20"
+    size="large"
+  />
+</View>
+`;

@@ -12,7 +12,6 @@ export interface Character {
     name: string;
   };
   episode: Episode[];
-  created: string;
   image: string;
 }
 

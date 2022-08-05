@@ -18,14 +18,11 @@ export const GET_CHARACTERS = gql`
         origin {
           id
           name
-          type
-          dimension
         }
         episode {
           id
           name
         }
-        created
       }
     }
   }
