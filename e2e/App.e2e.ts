@@ -5,10 +5,6 @@ describe('List Screen', () => {
     await device.launchApp();
   });
 
-  beforeEach(async () => {
-    await device.reloadReactNative();
-  });
-
   it('should have header title', async () => {
     await waitFor(element(by.text('CHARACTERS')))
       .toBeVisible()
@@ -25,6 +21,7 @@ describe('List Screen', () => {
     await waitFor(element(by.id('emptyText')))
       .toHaveText('No Item')
       .withTimeout(2000);
+    await element(by.id('inputText')).clearText();
   });
 
   it('should be able to search for a character and render the character item', async () => {
@@ -32,13 +29,36 @@ describe('List Screen', () => {
     await waitFor(element(by.text('Rick Sanchez')))
       .toBeVisible()
       .withTimeout(2000);
-  });
-
-  it('should be able to clear search input', async () => {
     await element(by.id('inputText')).clearText();
   });
 
   it('should have add to favorite icon', async () => {
     await waitFor(element(by.id('fav'))).toBeVisible();
+  });
+
+  it('should add second character in list to favorite list', async () => {
+    await element(by.id('fav')).atIndex(1).tap();
+  });
+
+  it('should navigate to favorite list', async () => {
+    await element(by.id('favScreen')).tap();
+  });
+
+  it('should check that favorite character exists in favorite list', async () => {
+    await waitFor(element(by.text('Morty Smith')))
+      .toBeVisible()
+      .withTimeout(2000);
+    await device.reloadReactNative();
+  });
+
+  it('should navigate to Detail screen', async () => {
+    await element(by.id('characterList')).atIndex(0).tap();
+  });
+
+  it('should find character details', async () => {
+    await waitFor(element(by.text('Morty Smith')))
+      .toBeVisible()
+      .withTimeout(2000);
+    await device.reloadReactNative();
   });
 });

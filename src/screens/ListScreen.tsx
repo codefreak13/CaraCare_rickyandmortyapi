@@ -67,6 +67,7 @@ const Home = () => {
               </View>
             </View>
             <Button
+              testID="favScreen"
               title="Go To Favorites"
               onPress={goToFavorites}
               customstyle={styles.buttonStyle}
