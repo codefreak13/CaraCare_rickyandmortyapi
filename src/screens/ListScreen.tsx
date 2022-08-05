@@ -3,7 +3,7 @@ import {useList} from 'src/hooks';
 import {statusData} from 'src/data';
 import {COLORS, hp} from 'src/utils/Utils';
 import {View, StyleSheet} from 'react-native';
-import {BoldText, MediumText, RegularText} from 'src/components/texts';
+import {BoldText, MediumText} from 'src/components/texts';
 import {ListView} from 'src/components/list-views';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {INPUT_TEST_ID, FAVORITE_LIST_BUTTON, SIZE, FAV_ICON} from 'src/types';
