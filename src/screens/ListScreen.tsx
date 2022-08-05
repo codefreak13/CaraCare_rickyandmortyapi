@@ -2,12 +2,14 @@ import React from 'react';
 import {SIZE} from 'src/types';
 import {useList} from 'src/hooks';
 import {statusData} from 'src/data';
+import {useQuery} from '@apollo/client';
 import {COLORS, hp} from 'src/utils/Utils';
 import {View, StyleSheet} from 'react-native';
-import {Header, Button, Input, PickerSelect, Loader} from 'src/components/ui';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import {BoldText} from 'src/components/texts';
 import {ListView} from 'src/components/list-views';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import {Header, Button, Input, PickerSelect, Loader} from 'src/components/ui';
+import {GET_CHARACTERS} from 'src/apollo/gql';
 
 const Home = () => {
   const {
@@ -27,6 +29,16 @@ const Home = () => {
     status,
     error,
   } = useList();
+
+  const {
+    loading: lo,
+    data,
+    error: ero,
+  } = useQuery(GET_CHARACTERS, {
+    variables: {page: 2},
+    onError: err => console.log(err.message),
+  });
+  console.log(lo, data, ero, 'lo, data,ero');
   return (
     <>
       {loading && renderedData.length === 0 ? (

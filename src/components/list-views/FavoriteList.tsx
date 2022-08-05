@@ -1,6 +1,6 @@
 import React from 'react';
 import BasicList from './BasicList';
-import {Character} from 'src/apollo/query';
+import {Character} from 'src/types';
 import {FavoriteItem} from 'src/components/list-items';
 
 type Props = {
@@ -12,11 +12,11 @@ const FavoriteList = (props: Props) => {
   const {data, onPress} = props;
   return (
     <BasicList
-      keyExtractor={(item, index) => item.id + index}
       data={data}
       renderItem={({item}) => (
         <FavoriteItem {...item} onPress={() => onPress(item)} />
       )}
+      keyExtractor={(item, index) => item.id.toString() + index.toString()}
     />
   );
 };

@@ -7,14 +7,14 @@ import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.backgroundStyle}>
-      <StatusBar barStyle={'light-content'} />
+    <AppContextProvider>
       <ApolloProvider client={client}>
-        <AppContextProvider>
+        <SafeAreaView style={styles.backgroundStyle}>
+          <StatusBar barStyle={'light-content'} />
           <Screens />
-        </AppContextProvider>
+        </SafeAreaView>
       </ApolloProvider>
-    </SafeAreaView>
+    </AppContextProvider>
   );
 };
 

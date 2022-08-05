@@ -1,15 +1,11 @@
-import {useQuery} from '@apollo/client';
-import {useState, useContext, useCallback, useMemo, useEffect} from 'react';
-import {useNavigation} from '@react-navigation/native';
-import {
-  Character,
-  CharacterData,
-  CharacterVars,
-  GET_CHARACTERS,
-} from 'src/apollo/query';
 import {debounce} from 'lodash';
+import {useQuery} from '@apollo/client';
 import {AppContext} from 'src/store/Context';
+import {GET_CHARACTERS} from 'src/apollo/gql';
+import {useNavigation} from '@react-navigation/native';
+import {Character, CharacterData, CharacterVars} from 'src/types';
 import {APP_ROUTE, ListScreenNavigationProp} from 'src/navigation/types';
+import {useState, useContext, useCallback, useMemo, useEffect} from 'react';
 
 const useList = () => {
   //navigation instance for list screen
@@ -23,6 +19,7 @@ const useList = () => {
     CharacterData,
     CharacterVars
   >(GET_CHARACTERS, {notifyOnNetworkStatusChange: true});
+  console.log(error, loading, data, 'error');
 
   //gets data path from the Apollo data
   const getDataFromApi = data?.characters?.results;

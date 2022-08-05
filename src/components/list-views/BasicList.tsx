@@ -1,15 +1,15 @@
 import React from 'react';
-import {View, FlatList, StyleSheet, ListRenderItem} from 'react-native';
 import {hp} from 'src/utils/Utils';
-import {Character} from 'src/apollo/query';
+import {Character} from 'src/types';
 import {BoldText} from 'src/components/texts';
+import {View, FlatList, StyleSheet, ListRenderItem} from 'react-native';
 
 type Props = {
   data: Character[];
-  onEndReached?: () => void;
-  onEndReachedThreshold?: number;
   keyValue?: number;
   numColumns?: number;
+  onEndReached?: () => void;
+  onEndReachedThreshold?: number;
   renderItem: ListRenderItem<Character>;
   keyExtractor: (item: Character, index: number) => string;
 };
@@ -18,22 +18,22 @@ const BasicList = (props: Props) => {
   const {
     data,
     keyValue,
+    renderItem,
     numColumns,
+    keyExtractor,
     onEndReached,
     onEndReachedThreshold,
-    keyExtractor,
-    renderItem,
   } = props;
   return (
     <FlatList
-      style={styles.listStyle}
-      keyExtractor={keyExtractor}
-      showsVerticalScrollIndicator={false}
+      data={data}
       key={keyValue}
       numColumns={numColumns}
-      data={data}
-      onEndReachedThreshold={onEndReachedThreshold}
+      style={styles.listStyle}
       onEndReached={onEndReached}
+      keyExtractor={keyExtractor}
+      showsVerticalScrollIndicator={false}
+      onEndReachedThreshold={onEndReachedThreshold}
       ListEmptyComponent={
         <View style={styles.emptyListStyle}>
           <BoldText title="No Item" />
@@ -49,15 +49,15 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
   },
-  titleContainerStyle: {
-    alignItems: 'flex-start',
-    marginHorizontal: hp(10),
-    marginTop: hp(20),
-    backgroundColor: 'transparent',
-  },
   emptyListStyle: {
-    alignItems: 'center',
     marginTop: hp(200),
+    alignItems: 'center',
+  },
+  titleContainerStyle: {
+    marginTop: hp(20),
+    marginHorizontal: hp(10),
+    alignItems: 'flex-start',
+    backgroundColor: 'transparent',
   },
 });
 

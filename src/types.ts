@@ -1,4 +1,45 @@
-import {Character} from './apollo/query';
+interface Episode {
+  name: string;
+}
+
+export interface Character {
+  id: string;
+  name: string;
+  status: string;
+  species: string;
+  gender: string;
+  origin: {
+    name: string;
+  };
+  episode: Episode[];
+  created: string;
+  image: string;
+}
+
+interface FilterCharacter {
+  status?: string;
+}
+
+interface Info {
+  count: number;
+  pages: number;
+  next: number;
+  prev: number;
+}
+
+export interface CharacterVars {
+  filter?: FilterCharacter;
+  page?: number;
+}
+
+export interface CharacterData {
+  characters: {
+    info: Info;
+    results: Character[];
+  };
+}
+
+export const API = 'https://rickandmortyapi.com/graphql';
 
 export enum FLEX_TYPE {
   columnReverse = 'column-reverse',

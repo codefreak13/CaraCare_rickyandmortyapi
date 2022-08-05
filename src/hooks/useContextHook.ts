@@ -1,7 +1,6 @@
-import {Character} from 'src/apollo/query';
-import {STORAGE_VALUES, VIEW_TYPE} from 'src/types';
-import {useState, useEffect, useLayoutEffect, useCallback} from 'react';
+import {Character, STORAGE_VALUES, VIEW_TYPE} from 'src/types';
 import AsyncStorage from '@react-native-community/async-storage';
+import {useState, useEffect, useLayoutEffect, useCallback} from 'react';
 
 const useAppContext = () => {
   const [favoriteList, setFavoriteList] = useState<Character[]>([]);
