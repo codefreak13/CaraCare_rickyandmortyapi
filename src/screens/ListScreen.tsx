@@ -20,6 +20,7 @@ const Home = () => {
     onChangeText,
     searchParam,
     onClearText,
+    viewLabel,
     viewType,
     loadMore,
     onPress,
@@ -42,18 +43,10 @@ const Home = () => {
             placeholder="Search"
             onClear={onClearText}
             setValue={onChangeText}
+            testID={'inputText'}
           />
           <View style={styles.filterBar}>
             <View style={styles.utility}>
-              <View style={styles.utilityItem}>
-                <BoldText title="View: " />
-                <Ionicons
-                  size={20}
-                  name={viewType}
-                  color={COLORS.Black}
-                  onPress={toggleViewType}
-                />
-              </View>
               <View style={styles.utilityItem}>
                 <BoldText title="Filter: " />
                 <PickerSelect
@@ -63,6 +56,15 @@ const Home = () => {
                   onValueChange={onChangeFormValue('status')}
                 />
               </View>
+              <View style={styles.utilityItem}>
+                <BoldText title={`${viewLabel} View: `} />
+                <Ionicons
+                  size={20}
+                  name={viewType}
+                  color={COLORS.Black}
+                  onPress={toggleViewType}
+                />
+              </View>
             </View>
             <Button
               title="Go To Favorites"
@@ -70,7 +72,6 @@ const Home = () => {
               customstyle={styles.buttonStyle}
             />
           </View>
-
           <ListView
             onPress={onPress}
             data={renderedData}

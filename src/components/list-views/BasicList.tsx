@@ -7,6 +7,7 @@ import {View, FlatList, StyleSheet, ListRenderItem} from 'react-native';
 type Props = {
   data: Character[];
   keyValue?: number;
+  testID?: string;
   numColumns?: number;
   onEndReached?: () => void;
   onEndReachedThreshold?: number;
@@ -18,6 +19,7 @@ const BasicList = (props: Props) => {
   const {
     data,
     keyValue,
+    testID,
     renderItem,
     numColumns,
     keyExtractor,
@@ -29,6 +31,7 @@ const BasicList = (props: Props) => {
       data={data}
       key={keyValue}
       numColumns={numColumns}
+      testID={testID}
       style={styles.listStyle}
       onEndReached={onEndReached}
       keyExtractor={keyExtractor}
@@ -36,7 +39,7 @@ const BasicList = (props: Props) => {
       onEndReachedThreshold={onEndReachedThreshold}
       ListEmptyComponent={
         <View style={styles.emptyListStyle}>
-          <BoldText title="No Item" />
+          <BoldText testID="emptyText" title="No Item" />
         </View>
       }
       renderItem={renderItem}

@@ -18,6 +18,10 @@ export const wp = (value: number) => {
   return wdp(`${dimension}%`);
 };
 
+export const capitalizeFirstLetter = (value: string) => {
+  return value.charAt(0).toUpperCase() + value.slice(1);
+};
+
 export const DEVICE_WIDTH = Dimensions.get('window').width;
 export const DEVICE_HEIGHT = Dimensions.get('window').height;
 

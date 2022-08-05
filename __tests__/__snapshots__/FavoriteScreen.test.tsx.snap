@@ -109,6 +109,7 @@ Array [
         }
       >
         <Unknown
+          testID="emptyText"
           title="No Item"
         />
       </View>
@@ -158,6 +159,7 @@ Array [
               undefined,
             ]
           }
+          testID="emptyText"
         >
           No Item
         </Text>

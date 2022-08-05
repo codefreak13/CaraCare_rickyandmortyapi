@@ -5,18 +5,20 @@ import {COLORS, hp} from 'src/utils/Utils';
 
 interface Props {
   title: string;
+  testID?: string;
   mainStyle?: ViewStyle;
   contentStyle?: TextStyle;
   content: string | number;
 }
 
 const ListText = (props: Props) => {
-  const {title, content, contentStyle, mainStyle} = props;
+  const {title, content, testID, contentStyle, mainStyle} = props;
 
   return (
     <View style={[styles.mainStyle, mainStyle]}>
       <BoldText title={title} customstyle={styles.titleStyle} />
       <MediumText
+        testID={testID}
         title={content}
         customstyle={{...styles.contentStyle, ...contentStyle}}
       />

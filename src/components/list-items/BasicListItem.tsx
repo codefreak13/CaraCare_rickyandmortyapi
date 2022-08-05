@@ -72,8 +72,9 @@ const BasicListItem = (props: Props) => {
         <ListText
           title="Name"
           content={name}
-          contentStyle={contentStyle}
+          testID="itemName"
           mainStyle={mainStyle}
+          contentStyle={contentStyle}
         />
         <ListText
           title="Status"
@@ -131,6 +132,7 @@ const BasicListItem = (props: Props) => {
       />
       {addToFavorite && (
         <Ionicons
+          testID="fav"
           name={favIcon}
           size={20}
           color={favColor}
@@ -140,6 +142,7 @@ const BasicListItem = (props: Props) => {
       )}
       {deleteFromFavorite && (
         <Ionicons
+          testID="dlt"
           name="trash"
           size={20}
           color={COLORS.Danger}

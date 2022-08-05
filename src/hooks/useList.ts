@@ -2,8 +2,9 @@ import {debounce} from 'lodash';
 import {useQuery} from '@apollo/client';
 import {AppContext} from 'src/store/Context';
 import {GET_CHARACTERS} from 'src/apollo/gql';
+import {capitalizeFirstLetter} from 'src/utils/Utils';
 import {useNavigation} from '@react-navigation/native';
-import {Character, CharacterData, CharacterVars} from 'src/types';
+import {Character, CharacterData, CharacterVars, VIEW_TYPE} from 'src/types';
 import {APP_ROUTE, ListScreenNavigationProp} from 'src/navigation/types';
 import {useState, useContext, useCallback, useMemo, useEffect} from 'react';
 
@@ -109,6 +110,12 @@ const useList = () => {
     navigation.navigate(APP_ROUTE.DETAIL, item);
   };
 
+  //conditionally render view style title
+  const viewLabel =
+    viewType === VIEW_TYPE.grid
+      ? capitalizeFirstLetter(VIEW_TYPE.grid)
+      : capitalizeFirstLetter(VIEW_TYPE.list);
+
   //calls the memoized function to search the data when the filter options are selected
   useEffect(() => {
     searchMatchingPatterns(searchParam);
@@ -131,6 +138,7 @@ const useList = () => {
     onChangeText,
     searchParam,
     onClearText,
+    viewLabel,
     loadMore,
     viewType,
     onPress,

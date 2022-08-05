@@ -17,6 +17,7 @@ const ListView = (props: Props) => {
     <BasicList
       data={data}
       onEndReached={loadMore}
+      testID="characterList"
       onEndReachedThreshold={2.5}
       keyValue={viewType === VIEW_TYPE.grid ? 1 : 0}
       numColumns={viewType === VIEW_TYPE.grid ? 2 : 0}
