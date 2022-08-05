@@ -1,19 +1,20 @@
 import React from 'react';
-import {StyleSheet, TextStyle, View} from 'react-native';
+import {StyleSheet, TextStyle, View, ViewStyle} from 'react-native';
 import {BoldText, MediumText} from './Text';
 import {COLORS, hp} from 'src/utils/Utils';
 
 interface Props {
   title: string;
-  content: string | number;
+  mainStyle?: ViewStyle;
   contentStyle?: TextStyle;
+  content: string | number;
 }
 
 const ListText = (props: Props) => {
-  const {title, content, contentStyle} = props;
+  const {title, content, contentStyle, mainStyle} = props;
 
   return (
-    <View style={styles.mainStyle}>
+    <View style={[styles.mainStyle, mainStyle]}>
       <BoldText title={title} customstyle={styles.titleStyle} />
       <MediumText
         title={content}
@@ -30,6 +31,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
+    flexWrap: 'wrap',
   },
   titleStyle: {
     color: COLORS.Black,
@@ -42,7 +44,7 @@ const styles = StyleSheet.create({
   },
   contentStyle: {
     color: COLORS.Black,
-    width: hp(150),
+    maxWidth: hp(150),
     flexWrap: 'wrap',
   },
 });

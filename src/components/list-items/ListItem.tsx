@@ -11,6 +11,7 @@ const ListItem = (props: ListItemProps) => {
     status,
     species,
     onPress,
+    mainStyle,
     originName,
     customStyle,
     firstEpisode,
@@ -30,6 +31,7 @@ const ListItem = (props: ListItemProps) => {
       onPress={onPress}
       origin={originName}
       episode={firstEpisode}
+      mainStyle={mainStyle}
       customStyle={customStyle}
       contentStyle={contentStyle}
       addToFavorite={addToFavorite}

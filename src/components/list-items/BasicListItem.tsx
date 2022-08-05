@@ -23,6 +23,7 @@ type Props = {
   species: string;
   episode: string;
   onPress?: () => void;
+  mainStyle?: ViewStyle;
   lastEpisode?: string;
   numOfEpisodes?: number;
   customStyle?: ViewStyle;
@@ -45,6 +46,7 @@ const BasicListItem = (props: Props) => {
     species,
     onPress,
     episode,
+    mainStyle,
     imageStyle,
     customStyle,
     lastEpisode,
@@ -67,31 +69,50 @@ const BasicListItem = (props: Props) => {
       onPress={() => onPress && onPress()}
       style={[styles.mainStyle, customStyle]}>
       <View style={styles.containerStyle}>
-        <ListText title="Name" content={name} contentStyle={contentStyle} />
-        <ListText title="Status" content={status} contentStyle={contentStyle} />
+        <ListText
+          title="Name"
+          content={name}
+          contentStyle={contentStyle}
+          mainStyle={mainStyle}
+        />
+        <ListText
+          title="Status"
+          content={status}
+          contentStyle={contentStyle}
+          mainStyle={mainStyle}
+        />
         <ListText
           title="Species"
           content={species}
           contentStyle={contentStyle}
+          mainStyle={mainStyle}
         />
         {!!gender && (
           <ListText
             title="Gender"
             content={gender}
             contentStyle={contentStyle}
+            mainStyle={mainStyle}
           />
         )}
-        <ListText title="Origin" content={origin} contentStyle={contentStyle} />
+        <ListText
+          title="Origin"
+          content={origin}
+          contentStyle={contentStyle}
+          mainStyle={mainStyle}
+        />
         <ListText
           title={`${!!lastEpisode ? 'First ' : ''}Episode`}
           content={episode}
           contentStyle={contentStyle}
+          mainStyle={mainStyle}
         />
         {!!lastEpisode && (
           <ListText
             title="Last Episode"
             content={lastEpisode}
             contentStyle={contentStyle}
+            mainStyle={mainStyle}
           />
         )}
         {!!numOfEpisodes && (
@@ -99,6 +120,7 @@ const BasicListItem = (props: Props) => {
             title="Number of Episodes"
             content={numOfEpisodes}
             contentStyle={contentStyle}
+            mainStyle={mainStyle}
           />
         )}
       </View>
@@ -144,12 +166,13 @@ const styles = StyleSheet.create({
       },
       ios: {
         shadowOffset: {
-          width: hp(10),
-          height: hp(10),
+          width: hp(5),
+          height: hp(2),
         },
-        shadowColor: COLORS.Grey,
-        shadowOpacity: 1,
+        shadowColor: COLORS.DarkGrey,
+        shadowOpacity: hp(0.5),
         zIndex: 999,
+        margin: hp(1),
       },
     }),
   },

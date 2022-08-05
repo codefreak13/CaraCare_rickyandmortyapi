@@ -46,6 +46,12 @@ export enum FLEX_TYPE {
   row = 'row',
 }
 
+export enum WRAP {
+  wrap = 'wrap',
+  nowrap = 'nowrap',
+  wrapReverse = 'wrap-reverse',
+}
+
 export enum ALIGN_TYPE {
   center = 'center',
   flexStart = 'flex-start',

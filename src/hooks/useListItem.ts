@@ -1,5 +1,6 @@
 import {useContext} from 'react';
 import {hp} from 'src/utils/Utils';
+import {Platform} from 'react-native';
 import {AppContext} from 'src/store/Context';
 import {
   ALIGN_TYPE,
@@ -7,6 +8,7 @@ import {
   ListItemProps,
   POSITION_TYPE,
   VIEW_TYPE,
+  WRAP,
 } from 'src/types';
 
 const useListItem = (props: ListItemProps) => {
@@ -35,6 +37,15 @@ const useListItem = (props: ListItemProps) => {
     alignItems,
   };
 
+  const mainStyle = {
+    flex: 1,
+    ...Platform.select({
+      ios: {
+        flexWrap: viewType === VIEW_TYPE.list ? WRAP.nowrap : WRAP.wrap,
+      },
+    }),
+  };
+
   const contentStyle = {
     width: viewType === VIEW_TYPE.grid ? hp(150) : hp(250),
   };
@@ -53,6 +64,7 @@ const useListItem = (props: ListItemProps) => {
     status,
     species,
     onPress,
+    mainStyle,
     originName,
     customStyle,
     contentStyle,

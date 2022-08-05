@@ -19,7 +19,6 @@ const useList = () => {
     CharacterData,
     CharacterVars
   >(GET_CHARACTERS, {notifyOnNetworkStatusChange: true});
-  console.log(error, loading, data, 'error');
 
   //gets data path from the Apollo data
   const getDataFromApi = data?.characters?.results;
