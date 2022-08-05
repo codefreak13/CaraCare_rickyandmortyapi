@@ -134,7 +134,7 @@ export default BasicListItem;
 const styles = StyleSheet.create({
   mainStyle: {
     flex: 1,
-    marginTop: hp(10),
+    marginVertical: hp(5),
     flexDirection: 'row',
     backgroundColor: COLORS.White,
     padding: hp(7),

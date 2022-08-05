@@ -46,13 +46,11 @@ const styles = StyleSheet.create({
 const pickerSelectStyles = StyleSheet.create({
   inputIOS: {
     fontSize: hp(16),
-    paddingVertical: hp(12),
-    paddingHorizontal: hp(10),
-    borderWidth: 1,
+    padding: hp(5),
+    borderWidth: 2,
     borderColor: COLORS.Grey,
     borderRadius: 4,
     color: COLORS.Black,
-    paddingRight: hp(30), // to ensure the text is never behind the icon
   },
   inputAndroid: {
     fontSize: hp(16),
@@ -65,5 +63,11 @@ const pickerSelectStyles = StyleSheet.create({
   },
   inputAndroidContainer: {
     marginTop: hp(15),
+  },
+  inputIOSContainer: {
+    width: hp(70),
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: hp(5),
   },
 });

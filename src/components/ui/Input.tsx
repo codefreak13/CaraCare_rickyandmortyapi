@@ -89,6 +89,8 @@ const styles = StyleSheet.create({
   },
   input: {
     minHeight: hp(50),
+    width: '90%',
+    paddingLeft: hp(5),
   },
   clearStyle: {
     marginRight: hp(10),

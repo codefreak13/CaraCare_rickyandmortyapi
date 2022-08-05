@@ -88,8 +88,8 @@ const useAppContext = () => {
     viewType,
     favoriteList,
     toggleViewType,
-    addFavoriteItem,
     favoriteListIds,
+    addFavoriteItem,
     deleteFavoriteItem,
   };
 };

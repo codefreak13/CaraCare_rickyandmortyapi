@@ -1,5 +1,5 @@
 import React from 'react';
-import {Header} from 'src/components';
+import {Header} from 'src/components/ui';
 import {useDetail} from 'src/hooks';
 import {BasicListItem} from 'src/components/list-items';
 

@@ -4,7 +4,7 @@ import {useList} from 'src/hooks';
 import {statusData} from 'src/data';
 import {COLORS, hp} from 'src/utils/Utils';
 import {View, StyleSheet} from 'react-native';
-import {Header, Button, Input, PickerSelect, Loader} from 'src/components';
+import {Header, Button, Input, PickerSelect, Loader} from 'src/components/ui';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {BoldText} from 'src/components/texts';
 import {ListView} from 'src/components/list-views';

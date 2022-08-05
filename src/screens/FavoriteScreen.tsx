@@ -1,5 +1,5 @@
 import React from 'react';
-import {Header} from 'src/components';
+import {Header} from 'src/components/ui';
 import {FavoriteList} from 'src/components/list-views';
 import {useFavorite} from 'src/hooks';
 
