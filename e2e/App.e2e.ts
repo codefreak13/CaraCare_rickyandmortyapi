@@ -1,4 +1,10 @@
 import {element, waitFor} from 'detox';
+import {
+  INPUT_TEST_ID,
+  CHARACTERS_LIST_TEST_ID,
+  FAVORITE_LIST_BUTTON,
+  FAV_ICON_TEST_ID,
+} from 'src/types';
 
 describe('List Screen', () => {
   beforeAll(async () => {
@@ -12,36 +18,36 @@ describe('List Screen', () => {
   });
 
   it('should scroll through Character list', async () => {
-    await element(by.id('characterList')).swipe('up', 'fast', 0.9);
+    await element(by.id(CHARACTERS_LIST_TEST_ID)).swipe('up', 'fast', 0.9);
     await device.reloadReactNative();
   });
 
   it('should be able to type a non existent character and render an empty list', async () => {
-    await element(by.id('inputText')).typeText('zw');
+    await element(by.id(INPUT_TEST_ID)).typeText('zw');
     await waitFor(element(by.id('emptyText')))
       .toHaveText('No Item')
       .withTimeout(2000);
-    await element(by.id('inputText')).clearText();
+    await element(by.id(INPUT_TEST_ID)).clearText();
   });
 
   it('should be able to search for a character and render the character item', async () => {
-    await element(by.id('inputText')).typeText('Sanchez');
+    await element(by.id(INPUT_TEST_ID)).typeText('Sanchez');
     await waitFor(element(by.text('Rick Sanchez')))
       .toBeVisible()
       .withTimeout(2000);
-    await element(by.id('inputText')).clearText();
+    await element(by.id(INPUT_TEST_ID)).clearText();
   });
 
   it('should have add to favorite icon', async () => {
-    await waitFor(element(by.id('fav'))).toBeVisible();
+    await waitFor(element(by.id(FAV_ICON_TEST_ID))).toBeVisible();
   });
 
   it('should add second character in list to favorite list', async () => {
-    await element(by.id('fav')).atIndex(1).tap();
+    await element(by.id(FAV_ICON_TEST_ID)).atIndex(1).tap();
   });
 
   it('should navigate to favorite list', async () => {
-    await element(by.id('favScreen')).tap();
+    await element(by.id(FAVORITE_LIST_BUTTON)).tap();
   });
 
   it('should check that favorite character exists in favorite list', async () => {
@@ -52,7 +58,7 @@ describe('List Screen', () => {
   });
 
   it('should navigate to Detail screen', async () => {
-    await element(by.id('characterList')).atIndex(0).tap();
+    await element(by.id(CHARACTERS_LIST_TEST_ID)).atIndex(0).tap();
   });
 
   it('should find character details', async () => {

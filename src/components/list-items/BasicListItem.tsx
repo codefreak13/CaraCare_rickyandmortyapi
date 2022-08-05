@@ -11,7 +11,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import FastImage, {ImageStyle} from 'react-native-fast-image';
 import {hp, COLORS} from 'src/utils/Utils';
 import {ListText} from 'src/components/texts';
-import {FAV_ICON} from 'src/types';
+import {FAV_ICON, FAV_ICON_TEST_ID} from 'src/types';
 
 type Props = {
   id?: string;
@@ -23,8 +23,8 @@ type Props = {
   species: string;
   episode: string;
   onPress?: () => void;
-  mainStyle?: ViewStyle;
   lastEpisode?: string;
+  mainStyle?: ViewStyle;
   numOfEpisodes?: number;
   customStyle?: ViewStyle;
   imageStyle?: ImageStyle;
@@ -132,7 +132,7 @@ const BasicListItem = (props: Props) => {
       />
       {addToFavorite && (
         <Ionicons
-          testID="fav"
+          testID={FAV_ICON_TEST_ID}
           name={favIcon}
           size={20}
           color={favColor}
@@ -142,7 +142,6 @@ const BasicListItem = (props: Props) => {
       )}
       {deleteFromFavorite && (
         <Ionicons
-          testID="dlt"
           name="trash"
           size={20}
           color={COLORS.Danger}

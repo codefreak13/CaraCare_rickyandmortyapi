@@ -1,7 +1,7 @@
 import React from 'react';
 import BasicList from './BasicList';
-import {Character, VIEW_TYPE} from 'src/types';
 import {ListItem} from 'src/components/list-items';
+import {Character, CHARACTERS_LIST_TEST_ID, VIEW_TYPE} from 'src/types';
 
 type Props = {
   data: Character[];
@@ -17,7 +17,7 @@ const ListView = (props: Props) => {
     <BasicList
       data={data}
       onEndReached={loadMore}
-      testID="characterList"
+      testID={CHARACTERS_LIST_TEST_ID}
       onEndReachedThreshold={2.5}
       keyValue={viewType === VIEW_TYPE.grid ? 1 : 0}
       numColumns={viewType === VIEW_TYPE.grid ? 2 : 0}

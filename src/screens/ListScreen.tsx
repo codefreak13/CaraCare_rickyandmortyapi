@@ -1,5 +1,4 @@
 import React from 'react';
-import {SIZE} from 'src/types';
 import {useList} from 'src/hooks';
 import {statusData} from 'src/data';
 import {COLORS, hp} from 'src/utils/Utils';
@@ -7,6 +6,7 @@ import {View, StyleSheet} from 'react-native';
 import {BoldText} from 'src/components/texts';
 import {ListView} from 'src/components/list-views';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {INPUT_TEST_ID, FAVORITE_LIST_BUTTON, SIZE} from 'src/types';
 import {Header, Button, Input, PickerSelect, Loader} from 'src/components/ui';
 
 const Home = () => {
@@ -43,7 +43,7 @@ const Home = () => {
             placeholder="Search"
             onClear={onClearText}
             setValue={onChangeText}
-            testID={'inputText'}
+            testID={INPUT_TEST_ID}
           />
           <View style={styles.filterBar}>
             <View style={styles.utility}>
@@ -67,7 +67,7 @@ const Home = () => {
               </View>
             </View>
             <Button
-              testID="favScreen"
+              testID={FAVORITE_LIST_BUTTON}
               title="Go To Favorites"
               onPress={goToFavorites}
               customstyle={styles.buttonStyle}

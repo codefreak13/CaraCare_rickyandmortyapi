@@ -86,3 +86,11 @@ export const enum STORAGE_VALUES {
   FAVORITE_LIST = 'FAVORITE_LIST',
   VIEW_TYPE = 'VIEW_TYPE',
 }
+
+export const INPUT_TEST_ID = 'inputText';
+
+export const CHARACTERS_LIST_TEST_ID = 'characterList';
+
+export const FAVORITE_LIST_BUTTON = 'goTofavScreen';
+
+export const FAV_ICON_TEST_ID = 'fav';
