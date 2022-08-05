@@ -77,7 +77,7 @@ export default Input;
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    maxHeight: hp(60),
+    maxHeight: hp(50),
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     borderRadius: hp(8),
   },
   input: {
-    minHeight: hp(50),
+    height: hp(50),
     width: '90%',
     paddingLeft: hp(5),
   },

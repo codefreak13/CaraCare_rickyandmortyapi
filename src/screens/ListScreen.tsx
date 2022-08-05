@@ -3,11 +3,11 @@ import {useList} from 'src/hooks';
 import {statusData} from 'src/data';
 import {COLORS, hp} from 'src/utils/Utils';
 import {View, StyleSheet} from 'react-native';
-import {BoldText} from 'src/components/texts';
+import {BoldText, MediumText, RegularText} from 'src/components/texts';
 import {ListView} from 'src/components/list-views';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {INPUT_TEST_ID, FAVORITE_LIST_BUTTON, SIZE} from 'src/types';
-import {Header, Button, Input, PickerSelect, Loader} from 'src/components/ui';
+import {INPUT_TEST_ID, FAVORITE_LIST_BUTTON, SIZE, FAV_ICON} from 'src/types';
+import {Header, Input, PickerSelect, Loader} from 'src/components/ui';
 
 const Home = () => {
   const {
@@ -37,7 +37,22 @@ const Home = () => {
         <BoldText customstyle={styles.errorText} title="Network Error" />
       ) : (
         <View style={styles.mainStyle}>
-          <Header title="CHARACTERS" customMiddleIcon />
+          <Header
+            title="CHARACTERS"
+            customMiddleIcon
+            rightButton={{
+              child: (
+                <Ionicons
+                  size={35}
+                  name={FAV_ICON.heartOutline}
+                  color={COLORS.Black}
+                  testID={FAVORITE_LIST_BUTTON}
+                  onPress={goToFavorites}
+                />
+              ),
+              onclick: () => {},
+            }}
+          />
           <Input
             value={searchParam}
             placeholder="Search"
@@ -46,32 +61,24 @@ const Home = () => {
             testID={INPUT_TEST_ID}
           />
           <View style={styles.filterBar}>
-            <View style={styles.utility}>
-              <View style={styles.utilityItem}>
-                <BoldText title="Filter: " />
-                <PickerSelect
-                  value={status}
-                  items={statusData}
-                  placeholder="Status"
-                  onValueChange={onChangeFormValue('status')}
-                />
-              </View>
-              <View style={styles.utilityItem}>
-                <BoldText title={`${viewLabel} View: `} />
-                <Ionicons
-                  size={20}
-                  name={viewType}
-                  color={COLORS.Black}
-                  onPress={toggleViewType}
-                />
-              </View>
+            <View style={styles.utilityItem}>
+              <MediumText title="Filter " />
+              <PickerSelect
+                value={status}
+                items={statusData}
+                placeholder="Status"
+                onValueChange={onChangeFormValue('status')}
+              />
             </View>
-            <Button
-              testID={FAVORITE_LIST_BUTTON}
-              title="Go To Favorites"
-              onPress={goToFavorites}
-              customstyle={styles.buttonStyle}
-            />
+            <View style={styles.utilityItem}>
+              <MediumText title={`${viewLabel} View `} />
+              <Ionicons
+                size={20}
+                name={viewType}
+                color={COLORS.Black}
+                onPress={toggleViewType}
+              />
+            </View>
           </View>
           <ListView
             onPress={onPress}
@@ -94,24 +101,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: hp(15),
   },
-  buttonStyle: {
-    alignSelf: 'center',
-    alignItems: 'center',
-    borderWidth: hp(0.7),
-    borderColor: COLORS.Black,
-    backgroundColor: COLORS.White,
-    padding: hp(5),
-    borderRadius: hp(5),
-  },
   errorText: {
     alignSelf: 'center',
     marginVertical: hp(50),
     color: COLORS.Danger,
   },
   filterBar: {
-    flex: 0.15,
     flexDirection: 'row',
-    marginVertical: hp(20),
+    marginVertical: hp(10),
     justifyContent: 'space-between',
     width: '100%',
   },
@@ -120,12 +117,6 @@ const styles = StyleSheet.create({
     bottom: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  utility: {
-    flex: 1,
-    maxWidth: 100,
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
   },
   utilityItem: {
     flexDirection: 'row',
