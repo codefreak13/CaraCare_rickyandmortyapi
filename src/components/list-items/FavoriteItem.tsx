@@ -1,7 +1,7 @@
 import React from 'react';
-import {useListItem} from '../hooks';
-import {ListItemProps} from '../types';
-import {BasicListItem} from '../ui';
+import {useListItem} from 'src/hooks';
+import {ListItemProps} from 'src/types';
+import BasicListItem from './BasicListItem';
 
 const FavoriteItem = (props: ListItemProps) => {
   const {

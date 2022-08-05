@@ -7,8 +7,8 @@ import {
   ViewStyle,
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome5';
-import {COLORS, DEVICE_HEIGHT, DEVICE_WIDTH} from '../utils/Utils';
-import {BoldText} from '../ui/Text';
+import {COLORS, DEVICE_HEIGHT, DEVICE_WIDTH} from 'src/utils/Utils';
+import {BoldText} from 'src/components/texts';
 
 export type HeaderButton = {
   text?: string;

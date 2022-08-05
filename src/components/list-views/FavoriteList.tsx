@@ -1,7 +1,7 @@
 import React from 'react';
-import {BasicList} from '../ui';
-import {Character} from '../apollo/query';
-import FavoriteItem from './FavoriteItem';
+import BasicList from './BasicList';
+import {Character} from 'src/apollo/query';
+import {FavoriteItem} from 'src/components/list-items';
 
 type Props = {
   data: Character[];

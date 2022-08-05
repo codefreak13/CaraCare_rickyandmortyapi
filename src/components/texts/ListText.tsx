@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, TextStyle, View} from 'react-native';
-import {BoldText, MediumText} from '.';
-import {COLORS, hp} from '../utils/Utils';
+import {BoldText, MediumText} from './Text';
+import {COLORS, hp} from 'src/utils/Utils';
 
 interface Props {
   title: string;

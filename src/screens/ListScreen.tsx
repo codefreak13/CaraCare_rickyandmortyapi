@@ -1,12 +1,13 @@
 import React from 'react';
-import {SIZE} from '../types';
-import {useList} from '../hooks';
-import {statusData} from '../data';
-import {COLORS, hp} from '../utils/Utils';
+import {SIZE} from 'src/types';
+import {useList} from 'src/hooks';
+import {statusData} from 'src/data';
+import {COLORS, hp} from 'src/utils/Utils';
 import {View, StyleSheet} from 'react-native';
-import {Header, ListView, Loader} from '../components';
+import {Header, Button, Input, PickerSelect, Loader} from 'src/components';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {BoldText, Button, Input, PickerSelect} from '../ui';
+import {BoldText} from 'src/components/texts';
+import {ListView} from 'src/components/list-views';
 
 const Home = () => {
   const {

@@ -2,9 +2,9 @@ import {useRoute, useNavigation} from '@react-navigation/native';
 import {
   DetailScreenNavigationProp,
   DetailScreenRouteProp,
-} from '../navigation/types';
-import {ALIGN_TYPE, FLEX_TYPE} from '../types';
-import {hp} from '../utils/Utils';
+} from 'src/navigation/types';
+import {ALIGN_TYPE, FLEX_TYPE} from 'src/types';
+import {hp} from 'src/utils/Utils';
 
 const useDetail = () => {
   const route = useRoute<DetailScreenRouteProp>();

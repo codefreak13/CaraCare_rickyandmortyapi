@@ -1,7 +1,7 @@
 import React from 'react';
 import RNPickerSelect from 'react-native-picker-select';
 import {StyleSheet, View, ViewStyle} from 'react-native';
-import {COLORS, hp} from '../utils/Utils';
+import {COLORS, hp} from 'src/utils/Utils';
 
 interface itemsProps {
   label: string;

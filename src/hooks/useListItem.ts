@@ -1,13 +1,13 @@
 import {useContext} from 'react';
-import {hp} from '../utils/Utils';
-import {AppContext} from '../store/Context';
+import {hp} from 'src/utils/Utils';
+import {AppContext} from 'src/store/Context';
 import {
   ALIGN_TYPE,
   FLEX_TYPE,
   ListItemProps,
   POSITION_TYPE,
   VIEW_TYPE,
-} from '../types';
+} from 'src/types';
 
 const useListItem = (props: ListItemProps) => {
   const {

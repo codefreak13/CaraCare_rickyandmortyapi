@@ -1,8 +1,8 @@
 import React from 'react';
 import {View, FlatList, StyleSheet, ListRenderItem} from 'react-native';
-import {hp} from '../utils/Utils';
-import {BoldText} from '.';
-import {Character} from '../apollo/query';
+import {hp} from 'src/utils/Utils';
+import {Character} from 'src/apollo/query';
+import {BoldText} from 'src/components/texts';
 
 type Props = {
   data: Character[];
@@ -10,7 +10,7 @@ type Props = {
   onEndReachedThreshold?: number;
   keyValue?: number;
   numColumns?: number;
-  renderItem: ListRenderItem<Character> | undefined;
+  renderItem: ListRenderItem<Character>;
   keyExtractor: (item: Character, index: number) => string;
 };
 

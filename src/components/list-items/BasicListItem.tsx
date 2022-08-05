@@ -9,9 +9,9 @@ import {
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import FastImage, {ImageStyle} from 'react-native-fast-image';
-import {hp, COLORS} from '../utils/Utils';
-import ListText from './ListText';
-import {FAV_ICON} from '../types';
+import {hp, COLORS} from 'src/utils/Utils';
+import {ListText} from 'src/components/texts';
+import {FAV_ICON} from 'src/types';
 
 type Props = {
   id?: string;

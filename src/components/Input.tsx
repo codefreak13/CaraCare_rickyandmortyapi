@@ -7,7 +7,7 @@ import {
   ViewStyle,
   View,
 } from 'react-native';
-import {COLORS, hp} from '../utils/Utils';
+import {COLORS, hp} from 'src/utils/Utils';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 type InputProps = {

@@ -1,6 +1,6 @@
 import React, {ReactNode} from 'react';
 import {ViewStyle, Pressable, TextStyle} from 'react-native';
-import {BoldText} from './Text';
+import {BoldText} from './texts';
 
 type ButtonProps = {
   customstyle?: ViewStyle;

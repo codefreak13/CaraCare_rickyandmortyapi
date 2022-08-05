@@ -1,6 +1,5 @@
-import {Alert} from 'react-native';
-import {Character} from '../apollo/query';
-import {STORAGE_VALUES, VIEW_TYPE} from '../types';
+import {Character} from 'src/apollo/query';
+import {STORAGE_VALUES, VIEW_TYPE} from 'src/types';
 import {useState, useEffect, useLayoutEffect, useCallback} from 'react';
 import AsyncStorage from '@react-native-community/async-storage';
 

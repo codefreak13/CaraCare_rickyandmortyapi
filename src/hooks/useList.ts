@@ -6,10 +6,10 @@ import {
   CharacterData,
   CharacterVars,
   GET_CHARACTERS,
-} from '../apollo/query';
+} from 'src/apollo/query';
 import {debounce} from 'lodash';
-import {AppContext} from '../store/Context';
-import {APP_ROUTE, ListScreenNavigationProp} from '../navigation/types';
+import {AppContext} from 'src/store/Context';
+import {APP_ROUTE, ListScreenNavigationProp} from 'src/navigation/types';
 
 const useList = () => {
   //navigation instance for list screen

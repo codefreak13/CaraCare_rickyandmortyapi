@@ -2,7 +2,7 @@ import React from 'react';
 import {render} from '@testing-library/react-native';
 import {MockedProvider} from '@apollo/client/testing';
 import Home from './ListScreen';
-import {GET_CHARACTERS} from '../apollo/query';
+import {GET_CHARACTERS} from 'src/apollo/query';
 
 const mocks: any = [
   {

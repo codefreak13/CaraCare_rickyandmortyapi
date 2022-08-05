@@ -1,8 +1,8 @@
 import React from 'react';
-import {BasicList} from '../ui';
-import ListItem from './ListItem';
-import {Character} from '../apollo/query';
-import {VIEW_TYPE} from '../types';
+import BasicList from './BasicList';
+import {ListItem} from 'src/components/list-items';
+import {Character} from 'src/apollo/query';
+import {VIEW_TYPE} from 'src/types';
 
 type Props = {
   data: Character[];

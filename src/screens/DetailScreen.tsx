@@ -1,7 +1,7 @@
 import React from 'react';
-import {Header} from '../components';
-import {useDetail} from '../hooks';
-import {BasicListItem} from '../ui';
+import {Header} from 'src/components';
+import {useDetail} from 'src/hooks';
+import {BasicListItem} from 'src/components/list-items';
 
 const DetailScreen = () => {
   const {

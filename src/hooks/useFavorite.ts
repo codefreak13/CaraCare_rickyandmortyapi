@@ -1,8 +1,8 @@
 import {useNavigation} from '@react-navigation/native';
 import {useContext} from 'react';
-import {AppContext} from '../store/Context';
-import {APP_ROUTE, FavoriteScreenNavigationProp} from '../navigation/types';
-import {Character} from 'apollo/query';
+import {AppContext} from 'src/store/Context';
+import {APP_ROUTE, FavoriteScreenNavigationProp} from 'src/navigation/types';
+import {Character} from 'src/apollo/query';
 
 const useFavorite = () => {
   const {favoriteList, deleteFavoriteItem} = useContext(AppContext);

@@ -10,10 +10,10 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@apollo/client@^3.6.9":
-  version "3.6.9"
-  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.6.9.tgz#ad0ee2e3a3c92dbed4acd6917b6158a492739d94"
-  integrity sha512-Y1yu8qa2YeaCUBVuw08x8NHenFi0sw2I3KCu7Kw9mDSu86HmmtHJkCAifKVrN2iPgDTW/BbP3EpSV8/EQCcxZA==
+"@apollo/client@^3.7.0-beta.3":
+  version "3.7.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.7.0-beta.6.tgz#bebb92283b44c22642268869f453a2c87dd74d44"
+  integrity sha512-7RwfzjqE6XKNla8rjuxhyO/OzQ3wyyEs9xtq0TKojDYoJy7KQQAChmDaoQ3mnzJZhNzsxusFW8gdgYNzdRoAGw==
   dependencies:
     "@graphql-typed-document-node/core" "^3.1.1"
     "@wry/context" "^0.6.0"
@@ -3583,7 +3583,7 @@ graphql-tag@^2.12.6:
   dependencies:
     tslib "^2.1.0"
 
-graphql@^16.5.0:
+graphql@^16.3.0:
   version "16.5.0"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.5.0.tgz#41b5c1182eaac7f3d47164fb247f61e4dfb69c85"
   integrity sha512-qbHgh8Ix+j/qY+a/ZcJnFQ+j8ezakqPiHwPiZhV/3PgGlgf96QMBB5/f2rkiC9sgLoy/xvT6TSiaf2nTHJh5iA==

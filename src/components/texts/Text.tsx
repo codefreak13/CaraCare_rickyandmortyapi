@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, TextStyle} from 'react-native';
-import {hp} from '../utils/Utils';
+import {hp} from 'src/utils/Utils';
 
 type TextProps = {
   title?: string | number;
@@ -39,14 +39,12 @@ export const RegularText = BaseText(textStyle({}));
 
 export const MediumText = BaseText(
   textStyle({
-    fontFamily: 'Roboto-Medium',
     fontSize: hp(16),
   }),
 );
 
 export const BoldText = BaseText(
   textStyle({
-    fontFamily: 'Roboto-Bold',
     fontSize: hp(16),
     fontWeight: 'bold',
   }),

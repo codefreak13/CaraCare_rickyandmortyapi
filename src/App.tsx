@@ -1,8 +1,8 @@
 import React from 'react';
-import {client} from './apollo';
+import {client} from 'src/apollo';
 import {ApolloProvider} from '@apollo/client';
-import AppContextProvider from './store/Context';
-import Screens from './navigation/RootNavigator';
+import AppContextProvider from 'src/store/Context';
+import Screens from 'src/navigation/RootNavigator';
 import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 
 const App = () => {

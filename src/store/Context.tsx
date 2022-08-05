@@ -1,6 +1,6 @@
-import {Character} from '../apollo/query';
+import {Character} from 'src/apollo/query';
 import React, {createContext, ProviderProps} from 'react';
-import {useContextHook} from '../hooks';
+import {useContextHook} from 'src/hooks';
 
 export const AppContext = createContext<{
   viewType: string;

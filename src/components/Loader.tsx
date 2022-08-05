@@ -1,7 +1,7 @@
 import React from 'react';
 import {ActivityIndicator, StyleSheet, View, ViewStyle} from 'react-native';
-import {SIZE} from '../types';
-import {COLORS} from '../utils/Utils';
+import {SIZE} from 'src/types';
+import {COLORS} from 'src/utils/Utils';
 
 type Props = {
   color?: string;

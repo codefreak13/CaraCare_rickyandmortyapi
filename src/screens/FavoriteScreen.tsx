@@ -1,7 +1,7 @@
 import React from 'react';
-import {Header} from '../components';
-import FavoriteList from '../components/FavoriteList';
-import {useFavorite} from '../hooks';
+import {Header} from 'src/components';
+import {FavoriteList} from 'src/components/list-views';
+import {useFavorite} from 'src/hooks';
 
 const FavoriteScreen = () => {
   const {favoriteList, goBack, onPress} = useFavorite();

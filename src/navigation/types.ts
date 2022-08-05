@@ -1,6 +1,6 @@
 import {RouteProp} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {Character} from '../apollo/query';
+import {Character} from 'src/apollo/query';
 
 /// We use enums to prevent the use of strings across the application - i.e, write once
 
