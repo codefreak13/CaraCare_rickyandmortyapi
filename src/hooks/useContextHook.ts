@@ -13,7 +13,7 @@ const useAppContext = () => {
     setFavoriteList(newList);
   };
 
-  //Adds favorite item
+  //add or remove favorite item
   const addFavoriteItem = (favoriteItem: Character) => {
     const favoriteItemExists = favoriteList.find(
       fav => fav?.id === favoriteItem.id,
@@ -26,7 +26,7 @@ const useAppContext = () => {
     setFavoriteList(clonedFavoriteList);
   };
 
-  //Saves favoriteList
+  //Saves favorite list to storage
   const saveFavoriteList = async () => {
     await AsyncStorage.setItem(
       STORAGE_VALUES.FAVORITE_LIST,
@@ -34,7 +34,7 @@ const useAppContext = () => {
     );
   };
 
-  //Fetch FavoriteList from Storage
+  //Fetch Favorite list from Storage
   const getFavoriteList = async () => {
     const value = await AsyncStorage.getItem(STORAGE_VALUES.FAVORITE_LIST);
     if (value) {
@@ -42,12 +42,12 @@ const useAppContext = () => {
     }
   };
 
-  //Saves favoriteList
+  //Saves view type
   const saveViewType = async () => {
     await AsyncStorage.setItem(STORAGE_VALUES.VIEW_TYPE, viewType);
   };
 
-  //Fetch FavoriteList from Storage
+  //Fetch view type from Storage
   const getViewType = async () => {
     const value = await AsyncStorage.getItem(STORAGE_VALUES.VIEW_TYPE);
     if (value) {
@@ -55,12 +55,13 @@ const useAppContext = () => {
     }
   };
 
+  //gets id of favorite list items
   const getFavoriteListIds = useCallback(() => {
     const listIds = favoriteList.map(item => item.id);
     setFavoriteListIds(listIds);
   }, [JSON.stringify(favoriteList)]);
 
-  //toggles viewType options
+  //toggles view type options
   const toggleViewType = () => {
     viewType === VIEW_TYPE.list
       ? setViewType(VIEW_TYPE.grid)
