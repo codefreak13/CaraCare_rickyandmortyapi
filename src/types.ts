@@ -82,7 +82,7 @@ export type ListItemProps = {
   addToFavorite?: () => void;
 } & Character;
 
-export const enum STORAGE_VALUES {
+export enum STORAGE_VALUES {
   FAVORITE_LIST = 'FAVORITE_LIST',
   VIEW_TYPE = 'VIEW_TYPE',
 }
