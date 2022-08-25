@@ -1,7 +1,7 @@
 import React from 'react';
 import {useList} from 'src/hooks';
 import {statusData} from 'src/data';
-import {COLORS, hp} from 'src/utils/Utils';
+import {COLORS, hp, wp} from 'src/utils/Utils';
 import {View, StyleSheet} from 'react-native';
 import {BoldText, MediumText} from 'src/components/texts';
 import {ListView} from 'src/components/list-views';
@@ -61,7 +61,7 @@ const Home = () => {
             testID={INPUT_TEST_ID}
           />
           <View style={styles.filterBar}>
-            <View style={styles.utilityItem}>
+            <View style={[styles.utilityItem]}>
               <MediumText title="Filter " />
               <PickerSelect
                 value={status}
@@ -121,6 +121,8 @@ const styles = StyleSheet.create({
   utilityItem: {
     flexDirection: 'row',
     alignItems: 'center',
+    width: wp('25%'),
+    justifyContent: 'flex-end',
   },
 });
 

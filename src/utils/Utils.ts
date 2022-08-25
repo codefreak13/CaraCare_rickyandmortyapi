@@ -13,7 +13,8 @@ export const hp = (value: number) => {
   return hdp(`${dimension}%`);
 };
 
-export const wp = (value: number) => {
+export const wp = (value: number | string) => {
+  if (typeof value === 'string') return wdp(value);
   const dimension = (value / CustomWidth) * 100;
   return wdp(`${dimension}%`);
 };

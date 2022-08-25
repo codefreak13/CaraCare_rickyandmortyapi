@@ -1,7 +1,7 @@
 import React from 'react';
 import RNPickerSelect from 'react-native-picker-select';
 import {StyleSheet, View, ViewStyle} from 'react-native';
-import {COLORS, hp} from 'src/utils/Utils';
+import {COLORS, wp, hp} from 'src/utils/Utils';
 
 interface itemsProps {
   label: string;
@@ -54,18 +54,21 @@ const pickerSelectStyles = StyleSheet.create({
   },
   inputAndroid: {
     fontSize: hp(16),
-    paddingHorizontal: hp(10),
-    paddingVertical: hp(8),
+    paddingHorizontal: hp(5),
+    paddingVertical: hp(5),
     borderWidth: 0.5,
     borderColor: COLORS.DarkGrey,
     borderRadius: hp(8),
     color: COLORS.Black,
   },
   inputAndroidContainer: {
-    marginTop: hp(15),
+    width: wp(70),
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: hp(5),
   },
   inputIOSContainer: {
-    width: hp(70),
+    width: wp(70),
     justifyContent: 'center',
     alignItems: 'center',
     marginVertical: hp(5),
