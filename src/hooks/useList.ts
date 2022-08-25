@@ -1,5 +1,5 @@
 import {debounce} from 'lodash';
-import {useQuery} from '@apollo/client';
+import {useQuery, NetworkStatus} from '@apollo/client';
 import {AppContext} from 'src/store/Context';
 import {GET_CHARACTERS} from 'src/apollo/gql';
 import {capitalizeFirstLetter} from 'src/utils/Utils';
@@ -39,7 +39,7 @@ const useList = () => {
 
   //function that specifies the state of the pagination load more
   const loadMoreState = useMemo(() => {
-    if (networkStatus === 3) return true;
+    if (networkStatus === NetworkStatus.fetchMore) return true;
     else {
       return false;
     }
